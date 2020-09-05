@@ -111,6 +111,9 @@ apiVersion: networking.istio.io/v1alpha3
 kind: EnvoyFilter
 metadata:
   name: als-tweaks
+  # setting the namespace to istio-system--or wherever istio's config is--can (somewhat) emulate the global access logging for all sidecars
+  # see the doc linked above
+  # namespace: ???
 spec:
   # don't forget to modify this as appropriate!
   # if it's missing, certain semantics apply: check the doc link above
