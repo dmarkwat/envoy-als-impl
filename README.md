@@ -11,7 +11,7 @@ So as I debug and explore the istio/envoy configs, after I've exhausted my `isti
 But Istio (as of at least 1.6) only has global access logging as a first-class config!
 Turn it on and it's on for everything...which is less than ideal in a lot of situations.
 
-So not satisfied with the situations, I started checking out how Envoy might best be persuaded to do as I need.
+So not satisfied with the situation, I started checking out how Envoy might best be persuaded to do as I need.
 I stumbled on the new(er) field on the [Istio annotations](https://istio.io/latest/docs/reference/config/annotations/) page, `proxy.istio.io/config`.
 Sweet; now I can modify _individual_ pods instead of the whole mesh.
 I've been waiting for exactly this (and excuses to use it)! (see the doc :))
@@ -25,7 +25,7 @@ One thing led to another and after lots of doc scanning (Envoy config was a litt
 It simply exposes both available gRPC API versions (v2/3) in a simple go program.
 Using k8s to deploy the service and some simple istio config, and it was time to begin the hotwiring!
 
-Technically, this Envoy ALS impl isn't technically required for granular logging.
+Technically, this Envoy ALS impl isn't required for granular logging.
 Why?
 Because we can also configure the file-based logging in the same way.
 It was only after I did all this I stumbled on the alternative (oops).
