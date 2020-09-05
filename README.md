@@ -30,7 +30,7 @@ Why?
 Because we can also configure the file-based logging in the same way.
 It was only after I did all this I stumbled on the alternative (oops).
 Still a valuable thing to have done, though.
-Hope it helps whomever find this!
+Hope it helps whomever finds this!
 
 That's all to the story; the rest is how it works and the results should be pretty obvious ;)
 Check out the build & deploy step and the following istio config to get yourself wired up and ready to go!
